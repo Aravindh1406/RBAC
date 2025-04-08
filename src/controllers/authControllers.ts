@@ -1,10 +1,12 @@
 import { registerUser,loginUser } from "../services/authServices";
 import { Request, Response } from "express";
+import { logInfo } from "../utils/logger";
 export const register=async(req:Request,res:Response)=>{
     try{
         const {name,email,password,roleId}=req.body
         const user=await registerUser(name,email,password,roleId)
-        res.json({message:"User Successfully Registered",user})
+        logInfo(`User registered: ${user.name}`)
+        res.status(201).json(user)
     }
     catch(err:any){
         console.log(err.message)
