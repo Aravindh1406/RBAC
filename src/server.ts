@@ -15,5 +15,6 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/events", eventRoutes)
 const port=process.env.PORT
 app.listen(port,()=>{
+    console.log("Server started")
     console.log(`server running on PORT:${port}`)
 })
