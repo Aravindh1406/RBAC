@@ -21,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build TypeScript
-        run: npm run tsc
+      - name: Run TypeScript compiler
+        run: npx tsc
 
       - name: Start App (for testing - optional)
         run: node dist/server.js
