@@ -5,10 +5,13 @@
   "scripts": {
   "clean": "rimraf dist",
   "build": "tsc",
-  "start": "npm run build && nodemon dist/server.js",
-  "start:js": "ts-node-dev --respawn src/server.ts",
+  "watch": "tsc --watch",
+  "serve": "nodemon dist/server.js",
+  "dev": "npm-run-all --parallel watch serve",
+  "start": "npm run build && npm run serve",
   "test": "echo \"Error: no test specified\" && exit 0"
 }
+
 ,
   "keywords": [],
   "author": "",
