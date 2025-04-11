@@ -6,7 +6,7 @@ console.log(connection_String)
 const connectDB=async()=>{
     try{
         const  CONNECT=await mongoose.connect(connection_String)
-        console.log("DB connected")
+        console.log("DB connected.....")
         console.log(`Host Name: ${CONNECT.connection.host}`)
         console.log(`DB Name: ${CONNECT.connection.name}`)
     }
