@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "clean": "rimraf dist",
-    "start": "npm-run-all --parallel start:ts start:js",
-    "tsc": "tsc",
-    "start:ts": "tsc -w",
-    "start:js": "nodemon --watch dist dist/server.js"
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "tsc -w & nodemon --watch dist dist/server.js",
+    "clean": "rimraf dist"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +27,7 @@
     "@types/dotenv": "^6.1.1",
     "@types/express": "^5.0.1",
     "@types/jsonwebtoken": "^9.0.9",
-    "@types/mongoose": "^5.11.96"
+    "@types/mongoose": "^5.11.96",
+    "@types/node": "^22.14.0"
   }
 }
