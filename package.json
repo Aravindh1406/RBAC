@@ -6,7 +6,8 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "tsc -w & nodemon --watch dist dist/server.js",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "test": "echo \"Error:no test specified\" && exit0"
   },
   "keywords": [],
   "author": "",
